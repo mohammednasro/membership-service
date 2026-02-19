@@ -15,6 +15,7 @@ A production-ready **Spring Boot** backend application for managing members with
 | Database | H2 (dev/test) |
 | JWT | jjwt |
 | Validation | Jakarta Validation |
+| MapStruct | 1.5.5  |
 | OpenAPI | springdoc-openapi |
 | Testing | JUnit 5 |
 
@@ -133,7 +134,7 @@ All endpoints are fully documented using `@Tag`, `@Operation`, `@ApiResponse`, s
 
 ## 🧪 Testing
 
-Integration tests are written using **H2 in-memory database**, `@SpringBootTest`, and `@Transactional`.
+Integration tests are written using **H2 in-memory database**, `@SpringBootTest`
 
 **Tested Scenarios:**
 - Create member
@@ -184,7 +185,6 @@ Centralized exception handling via `@RestControllerAdvice`.
 - `MemberException`
 - `UserException`
 - `ValidationException`
-- `LanguageNotSupportedException`
 
 ---
 
@@ -248,3 +248,8 @@ mvn spring-boot:run
 ## 👨‍💻 Author
 
 **Mohammed T. Nasro**  
+Java Technical Team Leader | SAP Hybris | Spring | SpringBoot | SDE | Senior Software Development Engineer | Microservices | SOA
+Email: mohammed.t.nasro@gmail.com
+Mobile:+962 799658789
+LinkedIn: mohammed-nasro-6b2179
+Location: Amman, Jordan
