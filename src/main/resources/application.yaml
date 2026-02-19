@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: membership-service
+  datasource:
+    url: jdbc:h2:mem:membershipdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  messages:
+    basename: messages
+    encoding: UTF-8
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.appswave.membership: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%X{correlationId}] [%X{userId}] [%X{email}] [%X{role}] %-5level %logger{36} - %msg%n"
+
+app:
+  jwt:
+    secret: CzI6BtohlpuSmCybih5hT08W91wYlfAI9F1pNeGH1BA
+    expiration: 3600000  # 1 hour in ms
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
